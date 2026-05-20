@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Exam Calculator</title>
+
+  <script src="https://www.desmos.com/api/v1.11/calculator.js"></script>
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: white;
+      font-family: sans-serif;
+    }
+
+    #calculator {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Hide branding/login related UI as much as possible */
+    .dcg-overgraph-pillbox-elements {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="calculator"></div>
+
+  <script>
+    const elt = document.getElementById('calculator');
+
+    const calculator = Desmos.GraphingCalculator(elt, {
+      keypad: true,
+      expressions: true,
+      settingsMenu: false,
+      zoomButtons: true,
+      expressionsCollapsed: false,
+      lockViewport: false,
+      border: false
+    });
+
+    // Optional: start with empty graph
+    calculator.setBlank();
+  </script>
+</body>
+</html>
