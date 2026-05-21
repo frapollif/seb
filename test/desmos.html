@@ -31,23 +31,6 @@
 </head>
 
 <body>
-  <div id="calculator"></div>
-
-  <script>
-    const elt = document.getElementById('calculator');
-
-    const calculator = Desmos.GraphingCalculator(elt, {
-      keypad: true,
-      expressions: true,
-      settingsMenu: false,
-      zoomButtons: true,
-      expressionsCollapsed: false,
-      lockViewport: false,
-      border: false
-    });
-
-    // Optional: start with empty graph
-    calculator.setBlank();
-  </script>
+  <iframe src="https://www.desmos.com/calculator/vwkq5gxaxa?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </body>
 </html>
